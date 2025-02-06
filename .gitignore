@@ -1,0 +1,72 @@
+# Byte-compiled / cached files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+*.env
+*.venv
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# MacOS system files
+.DS_Store
+
+# Logs and debugging files
+*.log
+*.out
+*.err
+
+# Cache directories
+.cache/
+*.mypy_cache/
+*.pytest_cache/
+*.hypothesis/
+
+# Environment variables and secrets
+.env
+.env.local
+*.secret
+config.json
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# PIP dependency files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Notebook outputs
+*.nbconvert/
+output/
+
+# Docker-related files
+docker-compose.override.yml
+.dockerignore
+
+# Ignore coverage reports
+.coverage
+.coverage.*
+*.cover
+*.lcov
+htmlcov/
+nosetests.xml
+coverage.xml
+
+# Ignore generated docs
+docs/_build/
+site/
+
+# Ignore PyInstaller binary output
+*.spec
+dist/
