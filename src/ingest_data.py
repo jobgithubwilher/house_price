@@ -74,8 +74,6 @@ class ZipDataIngestor(DataIngestor):
         # Read the selected file into a DataFrame
         df = ingestor_class.ingest(os.path.join(extraction_path, selected_file))
         
-        # Cleanup extracted files after reading
-        shutil.rmtree(extraction_path)
         return df
 
 # Implement a Factory to create DataIngestors
