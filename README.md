@@ -37,6 +37,13 @@ Install ZenML - https://docs.zenml.io/getting-started/installation
 pip install zenml
 ```
 
+## EDA
+
+The folder analysis `analysis/analyze_src` contains all the necessary functions for EDA following strategy and template design pattenrs. `analysis/EDA.ipynb` is a python notebook where all the EDA is done and the right analysis is performed.
+
+Create a virtual env
+(my suggestion is Conda Environment)
+
 # Re use Code below/comments
 
 Once virtualenv environment is activated, run following command:
