@@ -6,6 +6,7 @@ from steps.model_building_step import model_building_step
 from steps.model_evaluator_step import model_evaluator_step
 from steps.outlier_detection_step import outlier_detection_step
 from zenml import Model, pipeline, step
+import os
 
 
 @pipeline(
@@ -17,10 +18,17 @@ from zenml import Model, pipeline, step
 def ml_pipeline():
     """Define an end-to-end machine learning pipeline."""
 
+    # Get the directory of the current script (which is inside 'pipelines')
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Move one level up to get the parent directory (where 'data' is located)
+    parent_dir = os.path.dirname(current_dir)
+
+    # Construct the correct path to 'archive.zip' inside 'data'
+    file_path = os.path.join(parent_dir, "data", "archive.zip")
+
     # Data Ingestion Step
-    raw_data = data_ingestion_step(
-        file_path="/Users/ayushsingh/Desktop/end-to-end-production-grade-projects/prices-predictor-system/data/archive.zip"
-    )
+    raw_data = data_ingestion_step(file_path=file_path)
 
     # Handling Missing Values Step
     filled_data = handle_missing_values_step(raw_data)

@@ -7,4 +7,5 @@ pandas==2.0.3
 scikit_learn==1.3.2
 seaborn==0.13.2
 statsmodels==0.14.1
-zenml==0.64.0
+zenml==0.74.0
+zenml[server]==0.74.0
