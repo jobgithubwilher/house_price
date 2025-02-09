@@ -7,8 +7,7 @@ The pipeline is developed using **ZenML** that helps in managing ML workflows, a
 **Statistical Problem:** Predict house prices based on various features of the properties: size, location and condition.
 
 **MLOps & Production Readiness**
-- Differentitate our project bz integrating MLOps practices using ZenMl and MLFlow.
-- Implement CI/CD pipelines to automate testing, deployment, of the model in production.
+- Differentitate our project by integrating MLOps practices using ZenMl and MLFlow.
 - Ensure the model is not only accurate but also maintainable, scalable, and readz for real-world use.
 
 ## Prepare local environment
@@ -57,12 +56,16 @@ zenml model-deployer register mlflow --flavor=mlflow
 zenml stack register local-mlflow-stack -a default -o default -d mlflow -e mlflow_tracker --set
 ```
 
-You can run the following command to create an account and have access to the interface.
+Command to create an account and have access to the interface.
 (Just follow the 1 minute tutorial of zenml)
 
 ```
 zenml login --local
 ```
+
+## Deployment zenml
+
+The deployment process for the **House Price Prediction Model** is managed using **ZenML**, **MLflow**, and **FastAPI** to automate continuous model deployment and inference. When the deployment pipeline is triggered, it first runs the `continuous_deployment_pipeline`, which trains and logs the model. Then, the **MLflow Model Deployer** is activated to manage the model's lifecycle and start the MLflow prediction server. The `inference_pipeline` is then executed to handle real-time predictions. Users can inspect model experiments in the MLflow UI by running `mlflow ui --backend-store-uri <mlflow_uri>`. If needed, the deployment can be stopped using the `--stop-service` flag, which shuts down the MLflow prediction server gracefully.
 
 
 

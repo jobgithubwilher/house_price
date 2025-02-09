@@ -70,3 +70,6 @@ site/
 # Ignore PyInstaller binary output
 *.spec
 dist/
+
+# Ignore zen folder
+.zen/
